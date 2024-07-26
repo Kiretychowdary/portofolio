@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: rgb(29, 32, 32);
+        }
+
+        header {
+            position: fixed;
+            border-radius: 10px;
+            width: 98%;
+            height: 55px;
+            /* background-color: rgb(29, 32,32); */
+
+
+        }
+
+        .h1 ul {
+
+            display: flex;
+            height: 40px;
+            position: relative;
+            align-items: center;
+            color: violet;
+            gap: 90px;
+            justify-content: flex-end;
+
+        }
+
+        .h1 ul li {
+            cursor: pointer;
+            transition: 0.4s;
+
+        }
+
+        .h1 div {
+            position: relative;
+            right: 0;
+        }
+
+        .h1 ul li {
+            position: relative;
+            margin-left: 30px;
+            right: 0;
+            list-style: none;
+        }
+
+        .content {
+            /* position:relative; */
+            display: none;
+            height: 100px;
+            top: 50px;
+            margin-right: 40px;
+            width: 100px;
+            background: transparent;
+        }
+
+        .content a {
+            text-decoration: none;
+            position: relative;
+            gap: 100px;
+            color: pink;
+            left: 10px;
+        }
+
+        .box:hover~.content {
+            position: absolute;
+            display: block;
+            top: calc(-0.1)px;
+
+        }
+
+        .sliding {
+
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            top: 200px;
+            left: 500px;
+
+        }
+
+        .slides {
+            height: 400px;
+            width: 400px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .slides img{
+            /* display: none; */
+            position: absolute;
+            /* height: 10em; */
+            width: 10em;
+        }
+        img{
+            height:500px;
+            transition: 3s;
+            width:500px;
+            border-radius:10px;
+        }
+        .d1{
+            position: absolute;
+            height:500px;
+            width:500px;
+            /* background-color: rgba(32,122,32,0.5); */
+        }
+        .div{
+            height:10px;
+            width:500px;
+            /* background-color: red; */
+            position: absolute;
+            border-radius:10px;
+            bottom:0;
+            left:35%;
+            /* animation: span 1s infinite; */
+        }
+        .div span{
+            position: absolute;
+            height:10px;
+            border-radius: 10px;
+            width:10px;
+            animation: span 3000ms infinite;
+            background-color: white
+        }
+        @keyframes span{
+            /* 0%{
+                width:0%;
+            }
+            50%{
+                width:50%;
+            } */
+            100%{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="h1">
+        <!-- <img height="100px" width="100px" style="position: relative;left:50%;" src="travel.avif" alt="travel"> -->
+
+        <div>
+            <!-- <img height="100px" width="100px" style="position: relative;" src="travel.avif" alt="travel"> -->
+            <ul>
+                <li>
+                    <!-- <img height="100px" width="100px" style="position: relative;left:50%;" src="travel.avif" alt="travel"> -->
+                </li>
+                <li>
+                    <a><span>Home</span></a>
+                </li>
+                <li>
+                    <a><span>Profile</span></a>
+                </li>
+                <li>
+                    <a><span>Settings</span></a>
+                </li>
+                <li>
+                    <a><span>Tabs</span></a>
+                </li>
+                <li>
+                    <div class="h1">
+                        <div class="box">HII</div>
+                        <div class="content"><a href="#">RADHAKRISHNA</a>
+                            <a href="#">SHIVAPARAVATHI</a>
+                            <a href="#">VINAYAKA</a>
+                            <a href="#">SITARAM</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <section class="sliding">
+        <div class="slides">
+            <div class="slide"><img src="KRISHNALOVE.avif" alt="KRISHNALOVE"></div>
+            <img src="LORDSHIVA.webp" alt="SHIVALOVE">
+            <img src="LOVESHIVA.jpg" alt="SHIVALOVE">
+        </div>
+            <!-- <div class="div"><span></span></div> -->
+        </div>
+
+        <div class="d1"></div>
+    </section>
+    <div class="div"><span></span></div>
+    <script src="index.js"></script>
+</body>
+
+</html>
